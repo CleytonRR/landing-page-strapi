@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_page_teches",
+  "info": {
+    "name": "tech",
+    "icon": "coins"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
