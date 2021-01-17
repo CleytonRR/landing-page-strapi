@@ -66,6 +66,26 @@ const GET_LANDING_PAGE = gql`
     }
   }
 
+  fragment sectionAgenda on LandingPage {
+    sectionAgenda {
+      title
+      description
+    }
+  }
+
+  fragment pricingBox on LandingPage {
+    pricingBox {
+      totalPrice
+      numberInstallments
+      priceInstallments
+      benefits
+      button {
+        label
+        url
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
@@ -74,6 +94,8 @@ const GET_LANDING_PAGE = gql`
       ...sectionTech
       ...sectionConcepts
       ...sectionModules
+      ...sectionAgenda
+      ...pricingBox
     }
   }
 `
