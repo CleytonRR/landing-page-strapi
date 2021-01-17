@@ -100,10 +100,10 @@ export type SectionReviewProps = {
 
 export type SectionFaqProps = {
   title: string
-  questions: {
+  questions: Array<{
     question: string
     answer: string
-  }
+  }>
 }
 
 export type LandingPageProps = {
