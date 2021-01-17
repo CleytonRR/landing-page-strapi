@@ -86,6 +86,25 @@ const GET_LANDING_PAGE = gql`
     }
   }
 
+  fragment sectionAboutUs on LandingPage {
+    sectionAboutUs {
+      title
+      authors {
+        name
+        socialLinks {
+          title
+          url
+        }
+        role
+        description
+        photo {
+          url
+          alternativeText
+        }
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       ...logo
@@ -96,6 +115,7 @@ const GET_LANDING_PAGE = gql`
       ...sectionModules
       ...sectionAgenda
       ...pricingBox
+      ...sectionAboutUs
     }
   }
 `
